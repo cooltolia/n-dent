@@ -1,0 +1,61 @@
+mixin modal()
+	#modal1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body
+					form.modal-form(validate='', action='#', method='post')
+						.modal-input-row
+							label.modal-label(for='modal_name') Имя
+							input.modal-input(type='number' id='modal_name' name='modal_name')
+						.modal-input-row
+							label.modal-label(for='modal_tel1') Телефон
+							input.modal-input(id='modal_tel1' name='modal_tel1' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
+						button.modal-submit Заказать звонок
+	#modal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body
+					form.modal-form(validate='', action='#', method='post')
+						.modal-input-row
+							label.modal-label(for='modal_name') Имя
+							input.modal-input(type='number' id='modal_name' name='modal_name')
+						.modal-input-row
+							label.modal-label(for='modal_tel1') Телефон
+							input.modal-input(id='modal_tel1' name='modal_tel1' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
+						button.modal-submit Заказать диагностику
+	#modal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body
+					form.modal-form(validate='', action='#', method='post')
+						.modal-input-row
+							label.modal-label(for='modal_name') Имя
+							input.modal-input(type='number' id='modal_name' name='modal_name')
+						.modal-input-row
+							label.modal-label(for='modal_tel1') Телефон
+							input.modal-input(id='modal_tel1' name='modal_tel1' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
+						button.modal-submit Я готов!
+	#modal4.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body
+					form.modal-form(validate='', action='#', method='post')
+						.modal-input-row
+							label.modal-label(for='modal_name4') Имя
+							input.modal-input(type='number' id='modal_name4' name='modal_name4')
+						.modal-input-row
+							label.modal-label(for='modal_tel4') Телефон
+							input.modal-input(id='modal_tel4' name='modal_tel4' data-inputmask="'mask': '+7 (999) 999 99 99'" required placeholder='+7 (___) ___ __ __')
+						button.modal-submit Назначить встречу

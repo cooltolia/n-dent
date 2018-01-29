@@ -1,0 +1,8 @@
+-var menu = [{name:'Ортопедия', link:'#'}, {name:'Ортодонтия', link:'#'}, {name:'Терапия', link:'#'}, {name:'Гигиена', link:'#'}, {name:'Хирургия', link:'#'}, {name:'Доставка', link:'#'}, {name:'Контакты', link:'#'}]
+
+mixin main-nav()
+    +b.NAV.main-nav
+        +e.UL.list
+            for item in menu
+                +e.LI.item
+                    +e.A.link(href=item.link) #{item.name}

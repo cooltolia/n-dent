@@ -1,0 +1,22 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- var alias = "m"
+- var theme = 'бытовой техники'
+doctype
+html(lang='ru')
+	+doc-header
+	body.pageload.no-js
+		+main-header
+		+f-screen
+		+services
+		+masters
+		+spots
+		+appeal
+		+testimonials
+		+steps
+		+utp
+		+map
+		+main-footer
+		+modal
+		+doc-footer

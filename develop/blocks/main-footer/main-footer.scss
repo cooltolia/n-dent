@@ -1,0 +1,158 @@
+.main-footer {
+	width: 100%;
+	padding: 30px 0 40px;
+
+	font-family: $ubuntu;
+
+	background-color: #363636;
+}
+
+.main-footer__row {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-footer__col {
+	flex: 0 0 auto;
+	margin-right: 25px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.main-footer__logo {
+	display: block;
+	width: 189px;
+	height: 68px;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.main-footer__socials {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.main-footer__socials-item {
+	width: 36px;
+	height: 36px;
+	margin-right: 20px;
+
+	background-image: url('../images/insta_w.png');
+	background-size: cover;
+
+	&:nth-child(2) {
+		margin-right: 0;
+
+		background-image: url('../images/vk_w.png');
+	}
+}
+
+.main-footer__data {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.5;
+	text-align: center;
+
+	b {
+		font-weight: 700;
+	}
+}
+
+.main-footer__question {
+	margin-bottom: 15px;
+
+	color: $lighttext;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.main-footer__tel {
+	margin-bottom: 10px;
+
+	color: $lighttext;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.main-footer__button {
+	display: block;
+
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1;
+
+	&:hover,
+	&:active {
+		text-decoration: none;
+	};
+
+	.button {
+		color: $lighttext;
+		padding: 12px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-footer__row {
+		flex-wrap: wrap;
+	}
+
+	.main-footer__col {
+		width: 40%;
+		margin: 0 5% 25px;
+
+		&:last-child {
+			margin-right: 5%;
+		}
+	}
+
+	.main-footer__contacts {
+		text-align: center;
+	}
+
+	.main-footer__button {
+		width: 190px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.main-footer__row {
+		flex-flow: column nowrap;
+	}
+
+	.main-footer__col {
+		width: 100%;
+		margin: 0 auto 25px;
+
+		&:last-child {
+			margin-right: auto;
+			margin-bottom: 0;
+		}
+
+		&--mobile-top {
+			order: -1;
+		}
+	}
+
+	.main-footer__logo {
+		margin: 0 auto;
+	}
+
+	.main-footer__socials {
+		justify-content: center;
+	}
+}

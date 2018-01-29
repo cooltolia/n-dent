@@ -1,0 +1,15 @@
+-var steps = [{number: '1', text: 'Вы назначаете встречу в удобное для Вас время и место'}, {number: '2', text: 'Мастер приедет в течение часа'}, {number: '3', text: 'Устранит неисправность за 30 минут'}, {number: '4', text: 'Примет оплату, выдаст чек и гарантию на 1 месяц'}];
+
+mixin steps()
+    +b.SECTION.steps
+        +inner
+            +e.title
+                +title Оставьте все трудности нам и просто следите за процессом!
+            +e.UL.list
+                each step in steps
+                    +e.LI.item
+                        +e.number(data-number='#{step.number}')
+                        +e.P.text #{step.text}
+            +e.A.button(href='#modal3' data-toggle="modal" data-target="#modal3") 
+                +button Сделать первый шаг!
+                

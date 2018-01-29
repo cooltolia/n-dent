@@ -1,0 +1,20 @@
+mixin main-header()
+	+b.HEADER.main-header
+		+e.row
+			+inner
+				+e.wrapper
+					+e.col
+						+e.A.logo(href='/')
+							img(src="images/logo.png", alt="Логотип сервис-центра Ирем")
+					+e.col
+						+e.tel 8 (800) 555-55-550
+					+e.col.main-header__search
+						+e.A.search-btn(href='#search' title='поиск по сайты')
+					+e.col
+						+e.A.cart(href='/cart.html')
+				+e.FORM.search-form
+					+e.INPUT.search-input(name='search' placeholder='Поиск по сайту')
+		+e.row.--light
+			+inner
+				+main-nav
+					
