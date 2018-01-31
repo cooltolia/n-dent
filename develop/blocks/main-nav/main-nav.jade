@@ -1,4 +1,5 @@
 -var menu = [{name:'Ортопедия', link:'#'}, {name:'Ортодонтия', link:'#'}, {name:'Терапия', link:'#'}, {name:'Гигиена', link:'#'}, {name:'Хирургия', link:'#'}, {name:'Доставка', link:'#'}, {name:'Контакты', link:'#'}]
+-var i = 1
 
 mixin main-nav()
     +b.NAV.main-nav
@@ -6,3 +7,18 @@ mixin main-nav()
             for item in menu
                 +e.LI.item
                     +e.A.link(href=item.link) #{item.name}
+        
+mixin mobile-nav()
+    +b.NAV.mobile-nav
+        +e.UL.list.--top
+            -for (var i = 0; i < 4; i++) {
+                +e.LI.item
+                    +e.A.link(href=menu[i].link) #{menu[i].name}
+            -}
+            +e.LI.hamburger
+                +hamburger
+        +e.UL.list.--bottom
+            -for (var i = 4; i < menu.length; i++) {
+                +e.LI.item
+                    +e.A.link(href=menu[i].link) #{menu[i].name}
+            -}

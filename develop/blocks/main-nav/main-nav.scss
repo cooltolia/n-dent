@@ -5,12 +5,16 @@
     font-family: $roboto;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 .main-nav__list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
@@ -23,7 +27,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    margin: 0 15px;
+    margin: 0 10px;
 
     color: $darktext;
     font-size: 17px;
@@ -40,25 +44,85 @@
 }
 
 @media (max-width: 768px) {
-    .main-nav__list {
-        padding: 0 20px;
-    }
-
     .main-nav__item {
-        padding: 15px 7px;
+        padding: 15px 10px 13px;
     }
 
     .main-nav__link {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .main-nav {
-        margin-bottom: -25px;
+        display: none;
     }
 
-    .main-nav__list {
-        flex-wrap: wrap;
+    .mobile-nav {
+        display: block;
+        position: relative;
+    }
+
+    .mobile-nav__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #fafafa;
+
+        &--top {
+            position: relative;
+            z-index: 6;
+            
+        }
+
+        &--bottom {
+            position: absolute; 
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            z-index: 5;
+
+            transform: translateY(0);
+
+            transition: transform 300ms ease;
+
+            &.active {
+                transform: translateY(100%);
+                border-bottom: 1px solid #000;
+            }
+        }
+    }
+
+    .mobile-nav__item {
+        padding: 12px 7px 10px;
+    }
+
+    .mobile-nav__hamburger {
+       margin-left: 15px;
+    }
+
+    .mobile-nav__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        color: $darktext;
+        font-size: 12px;
+        line-height: 1;
+
+        transition: color 300ms ease;
+        
+        &:hover,
+        &:active,
+        &:focus {
+            color: $themecolor;
+            text-decoration: none;
+        }
     }
 }
