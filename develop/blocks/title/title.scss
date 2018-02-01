@@ -2,16 +2,16 @@
     width: 80%;
     margin: 0 auto;
 
-    font-family: $ubuntu;
+    font-family: $roboto;
     color: $darktext;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 300;
     text-align: center;
 }
 
 @media (max-width: 768px) {
 	.title {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 

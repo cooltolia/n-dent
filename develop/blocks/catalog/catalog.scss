@@ -1,0 +1,21 @@
+.catalog {
+    width: 100%;
+
+    font-family: $roboto;
+}
+
+.catalog__inner {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.catalog__filter {
+    width: 325px;
+    flex: 0 0 auto;
+}
+
+.catalog__products {
+    flex: 1 1 auto;
+}

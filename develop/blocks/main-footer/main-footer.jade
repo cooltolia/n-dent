@@ -1,20 +1,17 @@
 mixin main-footer()
 	+b.FOOTER.main-footer
 		+inner
-			+e.row
-				+e.col
-					+e.socials
-						+e.A.socials-item(href='instagram.com' title='Наш аккаунт в инстаграмме')
-						+e.A.socials-item(href='vk.com' title='Наш аккаунт во вконтакте')
-				+e.col
-					+e.data
-						| <b>ОГРН</b> 1107847162290 <br> <b>ИНН</b> 7802714852
-				+e.col.--mobile-top
-					+e.A.logo(href='/')
-						img(src="images/logo.png", alt="Логотип сервис-центра Ирем")
-				+e.col
-					+e.contacts
-						+e.question Остались вопросы?
-						+e.tel 8 (800) 555-55-550
-						+e.A.button(href='#modal1' data-toggle="modal" data-target="#modal1")
-							+button.--transparent.--light Заказать звонок
+			+e.socials
+				+e.A.socials-item(href='instagram.com' title='Наш аккаунт в инстаграмме')
+				+e.A.socials-item(href='vk.com' title='Наш аккаунт во вконтакте')
+				+e.A.socials-item(href='facebook.com' title='Наш аккаунт во facebook')
+			+e.UL.nav
+				+e.LI.nav-item
+					+e.A.nav-link(href='#') Информация
+				+e.LI.nav-item
+					+e.A.nav-link(href='#') Служба поддержки
+				+e.LI.nav-item
+					+e.A.nav-link(href='#') Дополнительно
+				+e.LI.nav-item
+					+e.A.nav-link(href='#') Личный кабинет
+				

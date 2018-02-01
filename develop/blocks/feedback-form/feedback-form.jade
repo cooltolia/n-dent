@@ -1,0 +1,8 @@
+mixin feedback-form()
+    +b.SECTION.feedback-form
+        +inner
+            +e.title
+                +title Оставить заявку
+            +e.FORM.form(action='#' method='post')
+                +e.INPUT.input(type='tel' name='tel' placeholder='Ваш номер')
+                +e.BUTTON.submit Отправить

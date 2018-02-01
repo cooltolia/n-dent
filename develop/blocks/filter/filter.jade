@@ -1,0 +1,33 @@
+mixin filter()
+    +b.filter
+        +e.block
+            +e.title Хирургические инструменты
+            +e.FORM.list(method='get' action='')
+                +e.item
+                    +e.LABEL.ch-label(for='instrument1') Костный рашпиль (17)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument1' id='instrument1')
+                +e.item
+                    +e.LABEL.ch-label(for='instrument2') Костные сребки и мембраны (14)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument2' id='instrument2')
+                +e. item
+                    +e.LABEL.ch-label(for='instrument3') Хирургические инструменты (17)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument3' id='instrument3')
+                +e. item
+                    +e.LABEL.ch-label(for='instrument4') Остеометры (21)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument4' id='instrument4')
+                +e. item
+                    +e.LABEL.ch-label(for='instrument5') Пинцеты (25)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument5' id='instrument5')
+                +e. item
+                    +e.LABEL.ch-label(for='instrument6') Щипцы для удаления (17)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument6' id='instrument6')
+                +e. item
+                    +e.LABEL.ch-label(for='instrument7') Распараторы (12)
+                    +e.INPUT.checkbox(type='checkbox' name='instrument7' id='instrument7')
+        +e.block
+            +e.title Стоимость
+            +e.FORM.price(method='get' action='')
+
+
+                
+                
