@@ -1,33 +1,53 @@
 mixin filter()
     +b.filter
         +e.block
-            +e.title Хирургические инструменты
-            +e.FORM.list(method='get' action='')
+            +e.title(data-target='filter-instruments') Хирургические инструменты
+            +e.FORM.list.active#filter-instruments(method='get' action='')
                 +e.item
-                    +e.LABEL.ch-label(for='instrument1') Костный рашпиль (17)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument1' id='instrument1')
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument1' id='instrument1')
+                    +e.LABEL.label(for='instrument1') Костный рашпиль (17)
                 +e.item
-                    +e.LABEL.ch-label(for='instrument2') Костные сребки и мембраны (14)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument2' id='instrument2')
-                +e. item
-                    +e.LABEL.ch-label(for='instrument3') Хирургические инструменты (17)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument3' id='instrument3')
-                +e. item
-                    +e.LABEL.ch-label(for='instrument4') Остеометры (21)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument4' id='instrument4')
-                +e. item
-                    +e.LABEL.ch-label(for='instrument5') Пинцеты (25)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument5' id='instrument5')
-                +e. item
-                    +e.LABEL.ch-label(for='instrument6') Щипцы для удаления (17)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument6' id='instrument6')
-                +e. item
-                    +e.LABEL.ch-label(for='instrument7') Распараторы (12)
-                    +e.INPUT.checkbox(type='checkbox' name='instrument7' id='instrument7')
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument2' id='instrument2')
+                    +e.LABEL.label(for='instrument2') Костные сребки и мембраны (14)
+                +e.item
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument3' id='instrument3' checked)
+                    +e.LABEL.label(for='instrument3') Хирургические инструменты (17)
+                +e.item
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument4' id='instrument4')
+                    +e.LABEL.label(for='instrument4') Остеометры (21)
+                +e.item
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument5' id='instrument5')
+                    +e.LABEL.label(for='instrument5') Пинцеты (25)
+                +e.item
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument6' id='instrument6')
+                    +e.LABEL.label(for='instrument6') Щипцы для удаления (17)
+                +e.item
+                    +e.INPUT.checkbox(type='checkbox' name='instrument' value='instrument7' id='instrument7')
+                    +e.LABEL.label(for='instrument7') Распараторы (12)
         +e.block
-            +e.title Стоимость
-            +e.FORM.price(method='get' action='')
-
+            +e.title(data-target='filter-price') Стоимость
+            +e.FORM.list.active#filter-price(method='get' action='')
+                +e.price-slider#slider-range
+                +e.INPUT#price(type='hidden', name='price', readonly='')
+                +e.LABEL.price-label(for='price') Выбранный диапазон:
+                br
+                +e.SPAN#price1 5000
+                +e.SPAN.currency р.
+                +e.SPAN  – 
+                +e.SPAN#price2 30000
+                +e.SPAN.currency р.
+        +e.block
+            +e.title(data-target='filter-sort') Сортировка
+            +e.FORM.list.active#filter-sort(method='get' action='')
+                +e.item
+                    +e.INPUT.checkbox(type='radio' name='sort' value='sort1' id='sort1')
+                    +e.LABEL.label(for='sort1') По убыванию
+                +e.item
+                    +e.INPUT.checkbox(type='radio' name='sort' value='sort2' id='sort2' checked)
+                    +e.LABEL.label(for='sort2') По возрастанию
+                +e.item
+                    +e.INPUT.checkbox(type='radio' name='sort' value='sort3' id='sort3')
+                    +e.LABEL.label(for='sort3') Настройки по умолчанию
 
                 
                 

@@ -19,3 +19,17 @@
 .catalog__products {
     flex: 1 1 auto;
 }
+
+@media (max-width: 480px) {
+    .catalog {
+        padding-top: 25px;
+    }
+
+    .catalog__inner {
+        display: block;
+    }
+
+    .catalog__filter {
+        width: 100%;
+    }
+}
