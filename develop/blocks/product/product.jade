@@ -1,0 +1,35 @@
+mixin product()
+    +b.SECTION.product
+        +inner
+            +e.m-bread
+                a(href='#')
+                | Костная мельница
+            +e.inner
+                +e.m-title Костная мельница
+                +e.m-price 9 000р.
+                +e.photos
+                    +e.photo-slider
+                        +e.photo-slide(data-thumb='images/mpr.jpg')
+                            img(src='images/mpr.jpg')
+                        +e.photo-slide(data-thumb='images/mpr_thumb.jpg')
+                            img(src='images/mpr_thumb.jpg')
+                        +e.photo-slide(data-thumb='images/mpr_thumb.jpg')
+                            img(src='images/mpr.jpg')
+                        +e.photo-slide(data-thumb='images/mpr_thumb.jpg')
+                            img(src='images/mpr_thumb.jpg')
+                +e.info
+                    +e.title Костная мельница
+                    +e.price 9 000р.
+                    +e.P.desc 
+                        | Набор разрабтан для простой и надежной фиксации мембран на кости. Особенности и технические характеристики.Набор разрабтан для простой и надежной фиксации мембран на кости. Особенности и технические характеристики
+                    +e.row
+                        +e.counter
+                            +counter
+                        +e.total-price 90 000
+                        +e.currency
+                            +e.A.currency-trigger.active(href='#' alt='в рублях')
+                            +e.A.currency-trigger(href='#' alt='в долларах')
+                        +e.total-number За 10 штук
+                    +e.A.button(href='#') Добавить в корзину
+                    +e.P.m-desc 
+                        | Набор разрабтан для простой и надежной фиксации мембран на кости. Особенности и технические характеристики.Набор разрабтан для простой и надежной фиксации мембран на кости. Особенности и технические характеристики

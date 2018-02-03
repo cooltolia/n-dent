@@ -1,0 +1,26 @@
+mixin cart()
+    +b.SECTION.cart
+        +inner
+            +e.m-bread 
+                a(href='#')
+                | Корзина
+            +e.item
+                +e.img(style="background-image: url('images/cat2_s.jpg')")
+                +e.info
+                    +e.title Костная мельница
+                    +e.counter
+                        +counter
+                    +e.price 90 000 руб.
+                    +e.delete
+            +e.item
+                +e.img(style="background-image: url('images/cat4_s.jpg')")
+                +e.info
+                    +e.title Костная мельница
+                    +e.counter
+                        +counter
+                    +e.price 90 000 руб.
+                    +e.delete
+            +e.summary
+                +e.sum-title Общая стоимость:
+                +e.total-price 180 000 руб.
+                +e.A.button Оформить заказ

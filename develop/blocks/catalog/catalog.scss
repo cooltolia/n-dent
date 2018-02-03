@@ -20,9 +20,33 @@
     flex: 1 1 auto;
 }
 
+.catalog__m-bread {
+    display: none;
+}
+
 @media (max-width: 480px) {
+    
+    .catalog__m-bread {
+        display: block;
+        padding: 15px;
+
+        color: #888888;
+        font-size: 12px;
+        font-weight: 300;
+
+        a {
+            width: 6px;
+            height: 12px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+
+            background-image: url('../images/prev.png');
+        }
+    }
+
     .catalog {
-        padding-top: 25px;
+        padding-top: 0;
     }
 
     .catalog__inner {
